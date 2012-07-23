@@ -1,2 +1,86 @@
+body
+  {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, sans-serif;
+  }
+#container
+  {
+    width: 800px;
+    min-height: 500px;
+    margin: 75px auto 25px auto;
+    padding: 25px;
+    background: #F1F1F1;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 11px 55px 5px rgba(44, 44, 44, 1);
+    box-shadow: 0px 5px 65px -10px rgba(33, 33, 33, 1);
+    text-align: center;
+  }
+#tablediv
+  {
+    display: inline-block;
+    margin: 55px auto 25px auto;
+  }
+#ctrldiv
+  {
+    
+  }
+.ctrl
+  {
+    width: 130px;
+    height: 30px;
+    padding: 15px 2px 5px 2px;
+    margin: 5px;
+    background: #CCC;
+    border-radius: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    font-family: Menlo, Consolas, Monaco, "Lucida Console", monospace;
+    font-size: larger;
+    border: 1px #BBB solid;
+    -webkit-box-shadow: 0px 2px 1px 0px white;
+    box-shadow: 0px 2px 1px 0px white;
+  }
 
+.ctrl span
+  {
+    width: 160px;
+    display: inline-block;
+  }
 
+.ctrl:hover
+  {
+    background: #aaa;
+    border: 1px #999 solid;
+    cursor: pointer;
+  }
+
+.big
+  {
+    height: 55px;
+  }
+
+.long
+  {
+    width: 427px;
+  }
+
+.long input
+  {
+    height: 26px;
+    width: 240px;
+    vertical-align: middle;
+    position: relative;
+    top: -5px;
+    font-family: Menlo, Consolas, Monaco, "Lucida Console", monospace;
+    font-size: larger;
+  }
+
+td
+  {
+    min-width: 60px;
+    padding: 6px 0px 6px 0px;
+    background: #ccc;
+    margin: 5px;
+    border-radius: 12px;
+    border: 3px #F1F1F1 solid;
+  }

@@ -18,5 +18,5 @@ make, modify, manage, export and delete HTML tables
 
 Demo: [here](http://simon.waldherr.eu/projects/tablectrl/)  
 License: GNU GPLv3  
-Version: 1.0  
+Version: 0.01  
 Date: July 2012
