@@ -1,4 +1,22 @@
-tableCtrl
-=========
+#tableCtrl
 
 make, modify, manage, export and delete HTML tables
+
+##functions
+
+* add table
+* add row
+* add column
+* change content of cell
+* merge cells
+* export to csv
+* export to sql
+* export to md
+* delete row
+* delete column
+* delete table
+
+Demo: [here](http://simon.waldherr.eu/projects/tablectrl/)  
+License: GNU GPLv3  
+Version: 1.0  
+Date: July 2012
