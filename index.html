@@ -9,31 +9,32 @@
     <script>
       function firsttable()
         {
-          addtable('tablediv');
+          addtable('0');
           document.getElementById('longctrl').style.display = 'inline-block';
         }
     </script>
 </head>
 <body>
+  <div id="topbg"></div>
   <div id="container">
     <h1>tableCtrl</h1>
     <p>make, modify, manage, export and delete HTML tables</p>
     <div>
       <span class="ctrl" onclick="firsttable();">addtable</span>
-      <span class="ctrl" onclick="addrow('tablediv-table');">addrow</span>
-      <span class="ctrl" onclick="addcolumn('tablediv-table');">addcolumn</span>
+      <span class="ctrl" onclick="addrow('tctrl-');">addrow</span>
+      <span class="ctrl" onclick="addcolumn('tctrl-');">addcolumn</span>
       <br>
       <div id="longctrl" style="display:none;">
-        <div class="ctrl long"><span onclick="addtable(this.nextSibling.value);">add table to </span><input name="" type="text" value="tablediv"></div><br>
-        <div class="ctrl long"><span onclick="addrow(this.nextSibling.value);">add row to </span><input name="" type="text" value="tablediv-table"></div><br>
-        <div class="ctrl long"><span onclick="addcolumn(this.nextSibling.value);">add column to </span><input name="" type="text" value="tablediv-table"></div><br>
+        <div class="ctrl long"><span onclick="addtable(this.nextSibling.value);">add table to </span><input id="atable" type="text" value="td-0-0"></div><br>
+        <div class="ctrl long"><span onclick="addrow(this.nextSibling.value);">add row to </span><input id="arow" type="text" value="tctrl-"></div><br>
+        <div class="ctrl long"><span onclick="addcolumn(this.nextSibling.value);">add column to </span><input id="acolumn" type="text" value="tctrl-"></div><br>
       </div>
       <br>
       <span class="ctrl big" onclick="getinfo('container');">getinfo container</span>
-      <span class="ctrl big" onclick="getinfo('tablediv');">getinfo tablediv</span>
-      <span class="ctrl big" onclick="getinfo('tablediv-table');">getinfo table</span>
+      <span class="ctrl big" onclick="getinfo('0');">getinfo tablediv</span>
+      <span class="ctrl big" onclick="getinfo('tctrl-');">getinfo table</span>
     </div>
-    <div id="tablediv">
+    <div id="0" class="tablecontainer">
       here comes the table
     </div>
   </div>

@@ -4,7 +4,7 @@ make, modify, manage, export and delete HTML tables
 
 ##functions
 
-* add table
+* add (sub-)table
 * add row
 * add column
 * change content of cell
