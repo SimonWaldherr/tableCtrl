@@ -12,6 +12,11 @@
           addtable('0');
           document.getElementById('longctrl').style.display = 'inline-block';
         }
+      function csvtotable()
+        {
+          document.getElementById('0').innerHTML = buildtablefromcsv('csvdiv', '|');
+          document.getElementById('longctrl').style.display = 'inline-block';
+        }
     </script>
 </head>
 <body>
@@ -20,6 +25,7 @@
     <h1>tableCtrl</h1>
     <p>make, modify, manage, export and delete HTML tables</p>
     <div>
+      <div class="ctrl long" onclick="csvtotable()">generate table from csv</div><br>
       <span class="ctrl" onclick="firsttable();">addtable</span>
       <span class="ctrl" onclick="addrow('tctrl-');">addrow</span>
       <span class="ctrl" onclick="addcolumn('tctrl-');">addcolumn</span>
@@ -38,5 +44,12 @@
       here comes the table
     </div>
   </div>
+  <div id="bottombg"></div>
+
+
+<div id="csvdiv" style="display:none;">td-0-0|td-1-0|td-2-0|td-3-0
+td-0-1|td-1-1|td-2-1|td-3-1
+td-0-2|td-1-2|td-2-2|td-3-2
+td-0-3|td-1-3|td-2-3|td-3-3</div>
 </body>
 </html>

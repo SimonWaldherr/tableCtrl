@@ -1,0 +1,3 @@
+[submodule "repos/DSV"]
+	path = repos/DSV
+	url = https://SimonWaldherr@github.com/SimonWaldherr/DSV.git

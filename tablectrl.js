@@ -80,3 +80,23 @@ function getinfo(id)
     var ele = document.getElementById(id);
     alert("Name: "+ele.nodeName+"\nTop: "+ele.offsetTop+"\nLeft: "+ele.offsetLeft+"\nHeight: "+ele.offsetHeight+"\nWidth: "+ele.offsetWidth+"\n");
   }
+
+function buildtablefromcsv(csvid, seperator)
+  {
+    var lines, cells, csv, i, j, returnstring;
+    csv = document.getElementById(csvid).innerHTML;
+    lines = csv.split("\n");
+    returnstring = '<table id="tctrl-">';
+    for (i = 0; i < lines.length; i++)
+      {
+        returnstring += '<tr>';
+        cells = lines[i].split(seperator);
+        for (j = 0; j < cells.length; j++)
+          {
+            returnstring += '<td id="'+cells[j]+'">'+cells[j]+'</td>';
+          }
+        returnstring += '</tr>';
+      }
+    returnstring += '</table>';
+    return returnstring;
+  }
