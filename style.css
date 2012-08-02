@@ -136,3 +136,9 @@ td
     border-radius: 12px;
     border: 3px #F1F1F1 solid;
   }
+
+#tablearea
+  {
+    width: 600px;
+    min-height: 400px;
+  }

@@ -83,20 +83,100 @@ function getinfo(id)
 
 function buildtablefromcsv(csvid, seperator)
   {
-    var lines, cells, csv, i, j, returnstring;
+    var lines, cells, csv, i, j, returnstring, settable, tablename;
+    var tableid = '';
+    csv = document.getElementById(csvid).innerHTML;
+    lines = csv.split("\n");
+    returnstring = '0';
+    for (i = 0; i < lines.length; i++)
+      {
+        if(lines[i] == '')
+          {
+            returnstring = '';
+          }
+        else
+          {
+            cells = lines[i].split(seperator);
+            if(cells[0] == 'tablectrl')
+              {
+                tablename = cells[2];
+                if(cells[2] == undefined)
+                  {
+                    tablename = cells[1].split("td-");
+                    tablename = "tctrl-"+tablename[1];
+                  }
+                returnstring = '<table id="'+tablename+'">'+"\n"+returnstring+'</table>'+"\n";
+                document.getElementById(cells[1]).innerHTML = returnstring;
+                
+              }
+            else
+              {
+                returnstring += '<tr>';
+                for (j = 0; j < cells.length; j++)
+                  {
+                    returnstring += '<td id="'+cells[j]+'">'+cells[j]+'</td>';
+                  }
+                returnstring += '</tr>'+"\n";
+              }
+          }
+      }
+  }
+/*
+function buildtablefromcsv(csvid, seperator)
+  {
+    var lines, cells, csv, i, j, returnstring, settable;
+    var tableid = '';
     csv = document.getElementById(csvid).innerHTML;
     lines = csv.split("\n");
     returnstring = '<table id="tctrl-">';
     for (i = 0; i < lines.length; i++)
       {
-        returnstring += '<tr>';
-        cells = lines[i].split(seperator);
-        for (j = 0; j < cells.length; j++)
+        if(tableid != '')
           {
-            returnstring += '<td id="'+cells[j]+'">'+cells[j]+'</td>';
+            //alert(tableid);
+            //alert(returnstring);
+            //returnstring += '</table>';
+            document.getElementById(tableid).innerHTML += returnstring;
+            document.getElementById('tablearea').value += returnstring;
+            //document.getElementById(tableid).innerHTML = document.getElementById(tableid).innerHTML+" "+returnstring;
+            returnstring = '';
           }
-        returnstring += '</tr>';
+        
+        cells = lines[i].split(seperator);
+        //alert(cells.length+" <--");
+        if(((cells.length == 1)&&cells[0] == '')||(settable == 1))
+          {
+            //alert(cells.length+" "+settable);
+            settable = 1;
+            tableid = '';
+            
+            
+            //tableid = cells
+            if(cells[0] != '')
+              {
+                tableid = cells[0];
+                //alert(tableid);
+                //returnstring += '</table>';
+                settable = 0;
+                returnstring += '<table>';
+              }
+            else
+              {
+                returnstring += '</table>';
+              }
+          }
+        else
+          {
+            returnstring += '<tr>';
+            for (j = 0; j < cells.length; j++)
+              {
+                returnstring += '<td id="'+cells[j]+'">'+cells[j]+'</td>';
+              }
+            returnstring += '</tr>';
+          }
+        //alert(i+": "+returnstring+"\n");
       }
-    returnstring += '</table>';
-    return returnstring;
+    //returnstring += '</table>';
+    
   }
+  */

@@ -16,8 +16,9 @@ make, modify, manage, export and delete HTML tables
 * delete column
 * delete table
 * csv2table
+* dsv2subtable
 
 Demo: [here](http://simon.waldherr.eu/projects/tablectrl/)  
 License: GNU GPLv3  
-Version: 0.015  
-Date: July 2012
+Version: 0.02  
+Date: August 2012
