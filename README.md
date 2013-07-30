@@ -19,6 +19,6 @@ make, modify, manage, export and delete HTML tables
 * dsv2subtable
 
 Demo: [here](http://simon.waldherr.eu/projects/tablectrl/)  
-License: GNU GPLv3  
-Version: 0.022  
-Date: August 2012
+License:   MIT  
+Version: 0.1.0  
+Date:  07.2013  
